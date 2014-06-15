@@ -70,4 +70,6 @@ app.get('/yelp/search/:term/longtitude/:long/latitude/:lat', function(req, res) 
 		});
 
 });
-app.listen(process.env.PORT || 8080);
+
+app.listen(process.env.PORT || 8080, '127.0.0.1');
+console.log('Server running at '+process.env.PORT);
