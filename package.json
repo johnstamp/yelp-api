@@ -1,8 +1,22 @@
 {
-  "name": "first-express-app",
+  "name": "topflight-services",
   "description": "a fine piece of express art",
   "version": "0.0.1",
   "dependencies": {
     "express": "^3.10.4"
-  }
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://jstamp@bitbucket.org/jstamp/services-api.git"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "John Stamp",
+  "license": "ISC"
 }
