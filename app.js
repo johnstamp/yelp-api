@@ -18,7 +18,7 @@ app.get('/yelp/search/:term/location/:location', function(req, res) {
 	var term=req.params.term;
 	var location=req.params.location;
 
-	yelp.search({term: term, location: location}, function(error, data) {
+	yelp.search({term: term, location: location,sort:"2"}, function(error, data) {
 		console.log(req.params.term);
 		console.log(req.params.location);
 		res.header("Access-Control-Allow-Origin", "*")
