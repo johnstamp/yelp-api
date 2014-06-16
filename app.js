@@ -74,6 +74,8 @@ app.get('/yelp/search/:term/longtitude/:longtitude/latitude/:latitude', function
 });
 
 app.get('*', function(req, res){
+	console.log("404 hit");
+	res.header("Access-Control-Allow-Origin", "*")
   res.send('what???', 404);
 });
 
