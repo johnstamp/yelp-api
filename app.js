@@ -66,7 +66,7 @@ app.get('/yelp/search/:term/longtitude/:longtitude/latitude/:latitude', function
 
 		res.header("Access-Control-Allow-Origin", "*")
   		//console.log(error);
-  		//console.log(data);
+  		console.log(data);
   		res.setHeader('Content-Type', 'application/json');
 		res.send(data);
 		});
