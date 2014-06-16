@@ -53,15 +53,17 @@ app.get('/yelp/search/category/:category_filter/location/:location', function(re
 });
 
 
-app.get('/yelp/search/:term/longtitude/:long/latitude/:lat', function(req, res) {
+app.get('/yelp/search/:term/longtitude/:longtitude/latitude/:latitude', function(req, res) {
 
 	var term=req.params.term;
-	var longtitude=req.params.long;
-	var latitude=req.params.lat;
+	var longtitude=req.params.longtitude;
+	var latitude=req.params.latitude;
+	var longlat=longtitude+','+latitude;
+	console.log.log('ing from long and lat');
+	console.log.log(longlat);
 
-		yelp.search({term: term, longtitude:longtitude,latitude:latitude,limit:5}, function(error, data) {
-		console.log(req.params.term);
-		console.log(data);
+		yelp.search({term: term,ll:longlat,limit:5}, function(error, data) {
+
 		res.header("Access-Control-Allow-Origin", "*")
   		//console.log(error);
   		//console.log(data);
