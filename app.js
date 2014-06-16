@@ -37,7 +37,7 @@ app.get('/yelp/search/category/:category_filter/location/:location', function(re
 	var category=req.params.category_filter;
 	var location=req.params.location;
 
-	yelp.search({category: category, location: location}, function(error, data) {
+	yelp.search({category: category, location: location,limit:5}, function(error, data) {
 		console.log(category);
 		console.log(location);
 		res.header("Access-Control-Allow-Origin", "*")
