@@ -59,8 +59,8 @@ app.get('/yelp/search/:term/longtitude/:longtitude/latitude/:latitude', function
 	var longtitude=req.params.longtitude;
 	var latitude=req.params.latitude;
 	var longlat=longtitude+','+latitude;
-	console.log.log('ing from long and lat');
-	console.log.log(longlat);
+	console.log('ing from long and lat');
+	console.log(longlat);
 
 		yelp.search({term: term,ll:longlat,limit:5}, function(error, data) {
 
