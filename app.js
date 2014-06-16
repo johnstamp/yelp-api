@@ -73,6 +73,10 @@ app.get('/yelp/search/:term/longtitude/:longtitude/latitude/:latitude', function
 
 });
 
+app.get('*', function(req, res){
+  res.send('what???', 404);
+});
+
 var port = Number(process.env.PORT || 8080);
 app.listen(port, function() {
   console.log("Listening on " + port);
