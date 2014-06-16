@@ -18,7 +18,7 @@ app.get('/yelp/search/:term/location/:location', function(req, res) {
 	var term=req.params.term;
 	var location=req.params.location;
 
-	yelp.search({term: term, location: location,sort:"2"}, function(error, data) {
+	yelp.search({term: term, location: location,sort:"2",limit:5}, function(error, data) {
 		console.log(req.params.term);
 		console.log(req.params.location);
 		res.header("Access-Control-Allow-Origin", "*")
@@ -59,7 +59,7 @@ app.get('/yelp/search/:term/longtitude/:long/latitude/:lat', function(req, res) 
 	var longtitude=req.params.long;
 	var latitude=req.params.lat;
 
-		yelp.search({term: term, longtitude:longtitude,latitude:latitude}, function(error, data) {
+		yelp.search({term: term, longtitude:longtitude,latitude:latitude,limit:5}, function(error, data) {
 		console.log(req.params.term);
 		console.log(data);
 		res.header("Access-Control-Allow-Origin", "*")
